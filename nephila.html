@@ -53,15 +53,14 @@
         
         /* Estilos del reproductor de video para cubrir todo el viewport */
         #background-video {
-            width: 300vw; /* Asegura que el video sea más grande que el viewport */
-            height: 300vh; /* Asegura que el video sea más grande que el viewport */
+            /* Eliminamos los 300vw/vh para evitar el estiramiento y confiamos en object-fit y min-width/height */
             min-width: 100%;
             min-height: 100%;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%); /* Centra el video */
-            object-fit: cover; /* Fuerza al video a cubrir el área sin distorsionar */
+            object-fit: cover; /* Fuerza al video a cubrir el área sin distorsionar y manteniendo la relación de aspecto */
         }
         /* --- END Background Video Styles --- */
 
@@ -221,7 +220,7 @@
 
     <!-- Contenedor del video de fondo --><div id="video-background">
         <!-- Video Loop --><video id="background-video" autoplay loop muted playsinline>
-            <source src="https://i.imgur.com/Zsy3OC1.mp4" type="video/mp4">
+            <source src="https://i.imgur.com/o8uVjts.mp4" type="video/mp4">
             <!-- Fallback text -->Tu navegador no soporta la etiqueta de video HTML5.
         </video>
     </div>
@@ -264,9 +263,9 @@
 
         <!-- CONTENIDO PRINCIPAL --><main>
             
-<!-- SECCIÓN 1: INICIO --><section id="inicio-section" class="content-section active">
+            <!-- SECCIÓN 1: INICIO --><section id="inicio-section" class="content-section active">
                 
-<div class="bg-gray-800 rounded-lg shadow-xl p-6 md:p-8">
+                <div class="bg-gray-800 rounded-lg shadow-xl p-6 md:p-8">
                     <h2 class="text-3xl font-bold text-primary-neon-green mb-4">¡Bienvenidos al Torneo!</h2>
                     <p class="text-lg text-gray-300 mb-6">
                         Esta es la guía interactiva oficial del <span class="font-bold">V.E.N.O.M. TOURNAMENT - Versión Nephila</span>. Hemos organizado todas las reglas para que puedas encontrar fácilmente lo que necesitas. Revisa los datos clave a continuación y navega por las pestañas para conocer todos los detalles.
@@ -322,7 +321,7 @@
 
             <!-- SECCIÓN 2: INSCRIPCIÓN Y EQUIPOS --><section id="inscripcion-section" class="content-section">
                 
-<div class="bg-gray-800 rounded-lg shadow-xl p-6 md:p-8">
+                <div class="bg-gray-800 rounded-lg shadow-xl p-6 md:p-8">
                     <h2 class="text-3xl font-bold text-primary-neon-green mb-4">Inscripción y Equipos</h2>
                     <!-- Párrafo Modificado --><p class="text-lg text-gray-300 mb-6">
                         Si tu escuadrón ya se encuentra registrado dentro de la organización TNML (Torneos Nocturnos de Mobile Legends), entonces ya puedes proceder a inscribir a los jugadores de tu escuadrón que deseas que participen en el V.E.N.O.M. TOURNAMENT - Versión Nephila.
@@ -339,7 +338,7 @@
 
                     <div class="grid md:grid-cols-2 gap-6">
                         
-<!-- Reglas de Composición --><div class="bg-gray-900 p-6 rounded-lg border border-gray-700">
+                        <!-- Reglas de Composición --><div class="bg-gray-900 p-6 rounded-lg border border-gray-700">
                             <h3 class="text-2xl font-semibold text-primary-neon-green mb-3">Composición del Equipo (Roster)</h3>
                             <ul class="list-disc list-inside space-y-2 text-gray-300">
                                 <li><span class="font-bold">Costo:</span> La inscripción es 100% gratuita.</li>
@@ -358,7 +357,7 @@
                                 <li>Game ID (ID de jugador)</li>
                                 <!-- Se eliminó el punto 3 (Línea principal) --></ol>
                             
-<div class="mt-4 p-3 bg-red-900/50 border border-red-500 text-red-300 rounded-lg">
+                            <div class="mt-4 p-3 bg-red-900/50 border border-red-500 text-red-300 rounded-lg">
                                 <p class="font-bold">¡Importante!</p>
                                 <p>El <span class="font-bold">Nickname</span> registrado no podrá ser modificado durante el torneo. Jugar con un nick diferente se considera suplantación.</p>
                             </div>
@@ -406,7 +405,7 @@
 
             <!-- SECCIÓN 3: REGLAS DE PARTIDA --><section id="partida-section" class="content-section">
                 
-<div class="bg-gray-800 rounded-lg shadow-xl p-6 md:p-8">
+                <div class="bg-gray-800 rounded-lg shadow-xl p-6 md:p-8">
                     <h2 class="text-3xl font-bold text-primary-neon-green mb-4">Reglas de Partida</h2>
                     <p class="text-lg text-gray-300 mb-6">
                         Estas son las reglas que se aplican antes, durante y después de cada enfrentamiento. Es responsabilidad de los capitanes conocerlas.
@@ -414,7 +413,7 @@
 
                     <div class="space-y-6">
                         
-<!-- Antes de la Partida --><div>
+                        <!-- Antes de la Partida --><div>
                             <h3 class="2xl font-semibold text-primary-neon-green mb-3 border-b-2 border-gray-700 pb-2">Antes de la Partida</h3>
                             <ul class="list-none space-y-4">
                                 <li class="flex items-start gap-3">
@@ -445,7 +444,7 @@
                             <h3 class="2xl font-semibold text-primary-neon-green mb-3 border-b-2 border-gray-700 pb-2">Durante la Partida</h3>
                              <ul class="list-none space-y-4">
                                 
-<li class="flex items-start gap-3">
+                                <li class="flex items-start gap-3">
                                     <span class="text-red-500 font-bold text-xl">►</span>
                                     <div>
                                         <h4 class="font-semibold text-lg text-red-400">PROHIBIDO PAUSAR</h4>
@@ -453,7 +452,7 @@
                                     </div>
                                 </li>
                                 
-<li class="flex items-start gap-3">
+                                <li class="flex items-start gap-3">
                                     <span class="text-red-500 font-bold text-xl">►</span>
                                     <div>
                                         <h4 class="font-semibold text-lg text-red-400">PROHIBIDO ESPECTADORES</h4>
@@ -494,7 +493,7 @@
 
             <!-- SECCIÓN 4: CÓDIGO DE CONDUCTA --><section id="conducta-section" class="content-section">
                 
-<div class="bg-gray-800 rounded-lg shadow-xl p-6 md:p-8">
+                <div class="bg-gray-800 rounded-lg shadow-xl p-6 md:p-8">
                     <h2 class="text-3xl font-bold text-primary-neon-green mb-4">Código de Conducta  </h2>
                     <p class="text-lg text-gray-300 mb-6">
                         El juego limpio y el respeto son la base de TNML. Incurrir en las siguientes faltas resultará en sanciones severas.
@@ -502,7 +501,7 @@
 
                     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                         
-<!-- Faltas --><div class="stat-card border-l-4 border-gray-400 items-start p-4">
+                        <!-- Faltas --><div class="stat-card border-l-4 border-gray-400 items-start p-4">
                             <h3 class="text-xl font-bold text-gray-300 mb-2">🚫 PROHIBIDO</h3>
                             <p class="text-gray-400"><span class="font-bold">Suplantación de Identidad:</span> Jugar en la cuenta de otro jugador o con un Nickname no registrado.</p>
                         </div>
@@ -528,7 +527,7 @@
 
             <!-- SECCIÓN 5: DISPUTAS Y SANCIONES --><section id="disputas-section" class="content-section">
                 
-<div class="bg-gray-800 rounded-lg shadow-xl p-6 md:p-8">
+                <div class="bg-gray-800 rounded-lg shadow-xl p-6 md:p-8">
                     <h2 class="text-3xl font-bold text-primary-neon-green mb-4">Disputas y Sanciones</h2>
                     <p class="text-lg text-gray-300 mb-6">
                         Si un equipo rival rompe las reglas, aquí te explicamos cómo proceder y cuáles son las consecuencias.
@@ -536,7 +535,7 @@
 
                     <div class="grid md:grid-cols-2 gap-6">
                         
-<!-- Cómo Denunciar --><div class="bg-gray-900 p-6 rounded-lg border border-gray-700">
+                        <!-- Cómo Denunciar --><div class="bg-gray-900 p-6 rounded-lg border border-gray-700">
                             <h3 class="text-2xl font-semibold text-primary-neon-green mb-3">¿Cómo Denunciar una Falta?</h3>
                             <p class="text-gray-300 mb-4">Dado que las partidas no son supervisadas (excepto la final), las denuncias deben ser presentadas por los capitanes.</p>
                             <ol class="list-decimal list-inside space-y-2 text-gray-300 mb-4">
@@ -556,12 +555,12 @@
                             <h3 class="text-2xl font-semibold text-primary-neon-green mb-3">Sanciones por Faltas Graves  </h3>
                             <p class="text-gray-300 mb-3">Cualquier equipo que cometa las faltas graves (trampas, suplantación, hacks) recibirá:</p>
                             
-<ul class="list-disc list-inside space-y-2 text-red-500 font-bold">
+                            <ul class="list-disc list-inside space-y-2 text-red-500 font-bold">
                                 <li>Descalificación Inmediata del torneo.</li>
                                 <li>Baneo Permanente de la organización TNML (equipo e integrantes).</li>
                             </ul>
                             
-<div class="mt-4 p-3 bg-gray-700 border border-gray-600 text-gray-200 rounded-lg" style="background-color: var(--translucent-black-70) !important;">
+                            <div class="mt-4 p-3 bg-gray-700 border border-gray-600 text-gray-200 rounded-lg" style="background-color: var(--translucent-black-70) !important;">
                                 <p class="font-bold">Autoridad Final</p>
                                 <p>La organización TNML tiene la decisión final e inapelable sobre todas las disputas, basándose en las pruebas presentadas.</p>
                             </div>
