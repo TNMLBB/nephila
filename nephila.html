@@ -342,7 +342,7 @@ Tu navegador no soporta la etiqueta de video HTML5.
                 </a>
                 
                 <!-- Enlace Casteo (Ahora funcional e interactivo) -->
-                <!-- MODIFICACIÓN 1: Añadir nombre del caster -->
+                <!-- MODIFICACIÓN 1: El enlace ya estaba correcto -->
                 <a href="https://www.tiktok.com/@diabolos.gaming?_r=1&_t=ZM-914V1OER2tM" target="_blank" class="text-base md:text-lg font-medium text-gray-400 mt-1 interactive-link">
                     Casteado por <span class="font-bold underline">DIABOLOS GAMING</span>
                 </a>
@@ -507,8 +507,8 @@ Tu navegador no soporta la etiqueta de video HTML5.
                             Registra a tu Equipo de <span class="font-bold">5 Titulares</span> y máximo <span class="font-bold">2 Suplentes</span> para participar en el V.E.N.O.M. Tournament.
                         </p>
                         <div class="text-xs p-2 rounded-lg text-gray-400 font-medium w-full mt-2" style="background-color: var(--translucent-black-50);">
-                            <!-- MODIFICACIÓN 3: Cupos limitados en plural -->
-                            <span class="font-bold text-primary-neon-green">Recordatorio:</span> Los cupos son limitados. Si el formulario no permite el registro, los cupos ya fueron cubiertos.
+                            <!-- MODIFICACIÓN 3: Texto de cupos limitado ajustado -->
+                            <span class="font-bold text-primary-neon-green">Recordatorio:</span> Los cupos son limitados. Si el formulario no permite el registro, significa que los cupos ya fueron cubiertos.
                         </div>
                         
                         <!-- Player Registration Link -->
@@ -540,7 +540,7 @@ Tu navegador no soporta la etiqueta de video HTML5.
 
                         <!-- Registration Data -->
 <div class="bg-gray-900 p-6 rounded-lg border border-gray-700">
-                            <h3 class="text-2xl font-semibold text-primary-neon-green mb-3">Datos de Registro  </h3>
+                            <h3 class="text-2xl font-semibold text-primary-neon-green mb-3">Datos de Registro  </h3>
                             <p class="text-gray-300 mb-3">El capitán debe entregar la siguiente información por CADA jugador (titular y suplente):</p>
                             <ol class="list-decimal list-inside space-y-2 font-medium text-gray-300">
                                 <li>Nickname (Nombre en el juego)</li>
@@ -606,6 +606,19 @@ Tu navegador no soporta la etiqueta de video HTML5.
                             
                         </div>
                     </div>
+
+                    <!-- New: Verification Process (MODIFICACIÓN 3) -->
+                    <div class="mt-10 pt-6 border-t border-gray-700">
+                        <h3 class="text-2xl font-bold text-primary-neon-green mb-4 text-center">Proceso de Verificación para Premios</h3>
+                        <p class="text-lg text-gray-300 mb-4 text-center">
+                            Para garantizar un juego limpio y la conexión con la comunidad, el equipo ganador será sometido a las siguientes verificaciones antes de la entrega del premio y trofeo digital:
+                        </p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-300 mx-auto max-w-lg">
+                            <li class="text-secondary-blue-violet"><span class="font-bold text-primary-neon-green">Identidad de Jugadores:</span> Se verificará que los jugadores sean efectivamente los que se registraron en el roster inicial del torneo.</li>
+                            <li class="text-secondary-blue-violet"><span class="font-bold text-primary-neon-green">Seguimiento en Redes:</span> Es obligatorio que todos los miembros del equipo sigan activamente las redes sociales de TNML.</li>
+                            <li class="text-secondary-blue-violet"><span class="font-bold text-primary-neon-green">Historial de Conducta:</span> Se revisará que el equipo y sus integrantes no tengan denuncias válidas realizadas por otro equipo rival por incumplimiento al Código de Conducta.</li>
+                        </ul>
+                    </div>
                 </div>
             </section>
 
@@ -624,13 +637,23 @@ Tu navegador no soporta la etiqueta de video HTML5.
 <div>
                             <h3 class="2xl font-semibold text-primary-neon-green mb-3 border-b-2 border-gray-700 pb-2">Antes de la Partida</h3>
                             <ul class="list-none space-y-4">
+                                <!-- NUEVA REGLA DE CONTACTO (MODIFICACIÓN 4) -->
+                                <li class="flex items-start gap-3">
+                                    <span class="text-secondary-blue-violet font-bold text-xl">►</span>
+                                    <div>
+                                        <h4 class="font-semibold text-lg">Contacto Obligatorio Pre-Partida</h4>
+                                        <p class="text-gray-400">Ambos capitanes deben <span class="font-bold">contactarse vía WhatsApp</span> al menos <span class="font-bold">10 minutos antes</span> de la hora pautada de la partida para coordinar la creación de la sala.</p>
+                                    </div>
+                                </li>
+
                                 <li class="flex items-start gap-3">
                                     <span class="text-secondary-blue-violet font-bold text-xl">►</span>
                                     <div>
                                         <h4 class="font-semibold text-lg">Creación de Sala y Prioridad (Organización Venezolana)</h4>
-                                        <p class="text-gray-400 mb-3">El modo de juego es <span class="font-bold">Draft Pick</span>. Si un equipo es <span class="font-bold text-primary-neon-green">venezolano</span>, tiene la <span class="underline">PRIORIDAD</span> para crear la sala. Si ambos o ningún equipo es venezolano, y no llegan a un acuerdo, deberán lanzar una moneda virtual para determinar quién crea la sala. Servidor: Venezuela.</p>
+                                        <!-- Texto de la regla de creación de sala ajustado (MODIFICACIÓN 4) -->
+                                        <p class="text-gray-400 mb-3">El modo de juego es <span class="font-bold">Draft Pick</span>. Si un equipo es <span class="font-bold text-primary-neon-green">venezolano</span>, tiene la <span class="underline">PRIORIDAD</span> para crear la sala. Si ambos o ningún equipo es venezolano, y no llegan a un acuerdo, deberán lanzar una moneda virtual, que debe ser transmitida por **videollamada** mostrando la pantalla uno de ellos. Servidor: Venezuela.</p>
                                         
-                                        <!-- MODIFICACIÓN 5: Botón para lanzar moneda -->
+                                        <!-- Botón para lanzar moneda -->
                                         <a href="https://share.google/gWDlmqwOYe3EmYted" target="_blank" class="inline-block px-4 py-2 text-xs font-bold uppercase rounded transition-all duration-300 transform hover:scale-105 shadow-md mt-2 btn-action-secondary">
                                             LANZAR MONEDA VIRTUAL AQUÍ
                                             <svg class="w-4 h-4 inline ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
@@ -707,7 +730,7 @@ Tu navegador no soporta la etiqueta de video HTML5.
 <section id="conducta-section" class="content-section">
                 
                 <div class="bg-gray-800 rounded-lg shadow-xl p-6 md:p-8">
-                    <h2 class="text-3xl font-bold text-primary-neon-green mb-4">Código de Conducta  </h2>
+                    <h2 class="text-3xl font-bold text-primary-neon-green mb-4">Código de Conducta  </h2>
                     <p class="text-lg text-gray-300 mb-6">
                         El juego limpio y el respeto son la base de TNML. Incurrir en las siguientes faltas resultará en sanciones severas.
                     </p>
@@ -720,10 +743,11 @@ Tu navegador no soporta la etiqueta de video HTML5.
                             <p class="text-gray-400"><span class="font-bold">Tolerancia Cero:</span> Actitudes xenófobas, racistas o discriminatorias a otros equipos, jugadores o nacionalidades. Conlleva Baneo Permanente.</p>
                         </div>
                         
-                        <!-- Rule 7: STAFF DISRESPECT -->
+                        <!-- Rule 7: STAFF DISRESPECT (MODIFICADO) -->
                         <div class="stat-card border-l-4 border-red-500 items-start p-4">
                             <h3 class="text-xl font-bold text-red-500 mb-2">🔴 IRRESPETO AL STAFF/ORG</h3>
-                            <p class="text-gray-400"><span class="font-bold">Mal Trato o Difamación:</span> Prohibido el mal trato al STAFF u organizadores. Prohibido hablar mal de la organización con pruebas de ello. Conlleva Baneo Permanente.</p>
+                            <!-- Texto modificado según solicitud -->
+                            <p class="text-gray-400"><span class="font-bold">Mal Trato y Difamación:</span> Prohibido el mal trato al STAFF u organizadores. Prohibido hablar mal de la organización. Recibir pruebas de ello conlleva <span class="font-bold">Baneo Permanente</span>.</p>
                         </div>
 
                         <!-- Rule 1: Impersonation -->
@@ -795,7 +819,7 @@ Tu navegador no soporta la etiqueta de video HTML5.
 
                         <!-- Sanctions - MODIFICACIÓN 8: Quitar asteriscos de Xenofobia -->
 <div class="bg-gray-900 p-6 rounded-lg border border-gray-700">
-                            <h3 class="text-2xl font-semibold text-primary-neon-green mb-3">Sanciones por Faltas Graves  </h3>
+                            <h3 class="text-2xl font-semibold text-primary-neon-green mb-3">Sanciones por Faltas Graves  </h3>
                             <p class="text-gray-300 mb-3">Cualquier equipo que cometa las faltas graves (trampas, suplantación, xenofobia, irrespeto al staff) recibirá:</p>
                             
                             <ul class="list-disc list-inside space-y-2 text-red-500 font-bold">
