@@ -226,6 +226,7 @@
             transform: scale(1.05);
         }
         
+        /* ESTILOS DE BOTONES DE ACCIÓN SECUNDARIA (CALENDARIO, RECLAMOS) */
         .btn-action-secondary {
             background-color: var(--secondary-blue-violet); 
             box-shadow: 0 0 15px var(--secondary-blue-violet);
@@ -288,6 +289,13 @@
         .music-btn:hover {
             filter: brightness(1.2);
         }
+
+        /* Estilo para la NOTA DE RESPONSABILIDAD */
+        .responsibility-note {
+            background-color: var(--alert-neon-red);
+            color: var(--base-black);
+            box-shadow: 0 0 15px var(--alert-neon-red);
+        }
     </style>
 </head>
 <body class="text-gray-100">
@@ -337,6 +345,12 @@ Tu navegador no soporta la etiqueta de video HTML5.
                 <a href="https://www.tiktok.com/@diabolos.gaming?_r=1&_t=ZM-914V1OER2tM" target="_blank" class="text-base md:text-lg font-medium text-gray-400 mt-1 interactive-link">
                     Casteado por <span class="font-bold underline">DIABOLOS GAMING</span>
                 </a>
+
+                <!-- **NUEVO: NOTA DE RESPONSABILIDAD** -->
+                <div class="mt-5 p-3 rounded-lg responsibility-note text-sm md:text-base font-extrabold shadow-lg">
+                    <p class="uppercase">ATENCIÓN CAPITANES:</p>
+                    <p class="text-sm font-semibold">Es OBLIGATORIO leer todas las secciones. No leer las bases NO exime a ningún equipo de las sanciones por incumplimiento.</p>
+                </div>
                 
                 <!-- Control de Música -->
                 <div class="mt-4">
@@ -356,7 +370,7 @@ Tu navegador no soporta la etiqueta de video HTML5.
                 Inicio
             </button>
             <button data-target="inscripcion" class="nav-btn text-sm md:text-base font-semibold py-2 px-3 md:px-5 rounded-lg">
-                Inscripción y Equipos
+                Registro del Torneo
             </button>
             <button data-target="partida" class="nav-btn text-sm md:text-base font-semibold py-2 px-3 md:px-5 rounded-lg">
                 Reglas de Partida
@@ -385,23 +399,24 @@ Tu navegador no soporta la etiqueta de video HTML5.
                     <!-- Key Stats -->
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                         
-<!-- Prize Card -->
+<!-- Prize Card - UPDATED -->
 <div class="stat-card border-l-4" style="border-left-color: var(--secondary-blue-violet);">
                             <span class="text-xs font-semibold text-gray-400 mb-1 text-center">PREMIO AL EQUIPO GANADOR</span>
-                            <span class="text-xl md:text-2xl font-bold text-secondary-blue-violet text-center">5 Pases Semanales</span>
-                            <span class="text-xs font-medium text-primary-neon-green mt-1 text-center">Entregado por ABSALOM SHOP</span
+                            <span class="text-xl md:text-2xl font-bold text-secondary-blue-violet text-center">5 Pases Semanales + Trofeo Digital</span>
+                            <span class="text-xs font-medium text-primary-neon-green mt-1 text-center">Publicación en Salón de la Fama (Instagram)</span>
                         </div>
                         
-<!-- Modality Card -->
+<!-- Modality Card - UPDATED -->
 <div class="stat-card border-l-4" style="border-left-color: var(--primary-neon-green);">
                             <span class="text-xs font-semibold text-gray-400 mb-1">MODALIDAD DE PARTIDA</span>
-                            <span class="text-xl md:text-2xl font-bold text-primary-neon-green text-center">Bo1 - Eliminación Simple</span>
+                            <span class="text-xl md:text-2xl font-bold text-primary-neon-green text-center">Bo1 (Rondas) / Bo3 (Gran Final)</span>
                         </div>
                     </div>
 
-                    <!-- Schedule -->
+                    <!-- Schedule - UPDATED WITH CALENDAR BUTTONS -->
 <div class="mb-10 p-6 rounded-lg shadow-2xl" style="background-color: var(--translucent-black-70);">
                         <h3 class="2xl font-bold text-primary-neon-green mb-4" style="text-shadow: 0 0 5px #39ff14;">CRONOGRAMA OFICIAL DEL TORNEO</h3>
+                        <p class="text-gray-300 text-center mb-4 font-medium">Añade las rondas a tu calendario de Google para no olvidar la hora de inicio.</p>
                         
                         <div class="grid md:grid-cols-2 gap-6 text-center">
                             
@@ -410,30 +425,55 @@ Tu navegador no soporta la etiqueta de video HTML5.
                                 <span class="block text-3xl font-extrabold text-secondary-blue-violet mb-2">JUEVES 13 NOV</span>
                                 <span class="block text-xl font-bold text-primary-neon-green mb-3">9:00 PM Vzla</span>
                                 <p class="text-gray-200 font-semibold">Rondas a Jugar:</p>
-                                <ul class="list-none text-lg text-gray-300 mt-1">
-                                    <li><span class="font-bold">Primera Ronda</span> (16 Equipos)</li>
-                                    <li><span class="font-bold">Cuartos de Final</span> (8 Equipos)</li>
+                                <ul class="list-none text-lg text-gray-300 mt-1 space-y-3">
+                                    
+                                    <!-- 1RA ROUND -->
+                                    <li>
+                                        <span class="font-bold">Primera Ronda</span> (9:00 PM - 9:59 PM, Bo1)
+                                        <a href="https://calendar.google.com/calendar/r/eventedit?text=1ra%20Ronda%20del%20V.E.N.O.M.%20TOURNAMENT%20-%20Nephila&dates=20251113T210000/20251113T215900&details=Bo1%20Eliminaci%C3%B3n%20Simple.%20Hora%20Venezuela.&sf=true&output=xml" target="_blank" class="block mt-2 px-3 py-1.5 text-sm btn-action-secondary mx-auto max-w-[280px] hover:text-primary-neon-green">1ra Ronda: Añadir a Calendario</a>
+                                    </li>
+                                    
+                                    <!-- CUARTOS DE FINAL -->
+                                    <li>
+                                        <span class="font-bold">Cuartos de Final</span> (10:00 PM - 11:00 PM, Bo1)
+                                        <a href="https://calendar.google.com/calendar/r/eventedit?text=4tos%20de%20Final%20del%20V.E.N.O.M.%20TOURNAMENT%20-%20Nephila&dates=20251113T220000/20251113T230000&details=Bo1%20Eliminaci%C3%B3n%20Simple.%20Hora%20Venezuela.&sf=true&output=xml" target="_blank" class="block mt-2 px-3 py-1.5 text-sm btn-action-secondary mx-auto max-w-[280px] hover:text-primary-neon-green">4tos de Final: Añadir a Calendario</a>
+                                    </li>
                                 </ul>
                             </div>
 
                             
-<!-- Day 2 Schedule -->
+<!-- Day 2 Schedule - UPDATED -->
 <div class="p-4 rounded-lg border-2" style="border-color: var(--primary-neon-green);">
                                 <span class="block text-3xl font-extrabold text-primary-neon-green mb-2">VIERNES 14 NOV</span>
                                 <span class="block text-xl font-bold text-secondary-blue-violet mb-3">9:00 PM Vzla</span>
                                 <p class="text-gray-200 font-semibold">Rondas a Jugar:</p>
-                                <ul class="list-none text-lg text-gray-300 mt-1">
-                                    <li><span class="font-bold">Semifinal</span> (4 Equipos)</li>
-                                    <li><span class="font-bold">Gran Final</span> (2 Equipos)</li>
+                                <ul class="list-none text-lg text-gray-300 mt-1 space-y-3">
+                                    
+                                    <!-- SEMIFINAL -->
+                                    <li>
+                                        <span class="font-bold">Semifinal</span> (9:00 PM - 9:59 PM, Bo1)
+                                        <a href="https://calendar.google.com/calendar/r/eventedit?text=Semifinal%20del%20V.E.N.O.M.%20TOURNAMENT%20-%20Nephila&dates=20251114T210000/20251114T215900&details=Bo1%20Eliminaci%C3%B3n%20Simple.%20Hora%20Venezuela.&sf=true&output=xml" target="_blank" class="block mt-2 px-3 py-1.5 text-sm btn-action-secondary mx-auto max-w-[280px] hover:text-secondary-blue-violet">Semifinal: Añadir a Calendario</a>
+                                    </li>
+                                    
+                                    <!-- GRAN FINAL -->
+                                    <li>
+                                        <span class="font-bold text-red-400">Gran Final</span> (10:00 PM - 11:30 PM, <span class="underline">Bo3</span>)
+                                        <a href="https://calendar.google.com/calendar/r/eventedit?text=Gran%20Final%20del%20V.E.N.O.M.%20TOURNAMENT%20-%20Nephila&dates=20251114T220000/20251114T233000&details=Gran%20Final%20Bo3.%20Transmitida%20por%20TikTok.%20Hora%20Venezuela.&sf=true&output=xml" target="_blank" class="block mt-2 px-3 py-1.5 text-sm btn-action-secondary mx-auto max-w-[280px] hover:text-secondary-blue-violet">Gran Final: Añadir a Calendario</a>
+                                    </li>
                                 </ul>
                             </div>
+                        </div>
+                        
+                        <!-- FINAL TRANSMISSION NOTE -->
+                        <div class="mt-6 p-3 rounded-lg text-sm md:text-base text-center font-medium" style="background-color: var(--translucent-black-50); border: 1px solid var(--primary-neon-green);">
+                            <span class="font-bold text-primary-neon-green">GRAN FINAL (Bo3):</span> Será transmitida en vivo por nuestro <a href="https://www.tiktok.com/@torneosnocturnos?_t=ZM-90xkaWgv1YW&_r=1" target="_blank" class="text-secondary-blue-violet underline font-bold">TikTok oficial</a> y narrada por nuestro Caster.
                         </div>
                     </div>
                     
                     <!-- Bracket Chart -->
 <h3 class="2xl font-bold text-primary-neon-green mb-4">Progresión del Torneo</h3>
                     <p class="text-gray-300 mb-4">
-                        El torneo se desarrollará en dos días con formato de eliminación simple (Bo1). La gráfica a continuación muestra cómo avanzarán los equipos (desde 16) hasta encontrar al campeón.
+                        El torneo se desarrollará en dos días con formato de eliminación simple (Bo1) hasta la final (Bo3). La gráfica a continuación muestra cómo avanzarán los equipos (desde 16) hasta encontrar al campeón.
                     </p>
                     <div class="chart-container w-full max-w-2xl mx-auto h-80 md:h-96 relative">
                         <canvas id="bracketChart"></canvas>
@@ -441,74 +481,48 @@ Tu navegador no soporta la etiqueta de video HTML5.
                 </div>
             </section>
 
-            <!-- Inscripcion Section -->
+            <!-- Inscripcion Section - MODIFIED TO ONE STEP -->
 <section id="inscripcion-section" class="content-section">
                 
                 <div class="bg-gray-800 rounded-lg shadow-xl p-6 md:p-8">
-                    <h2 class="text-3xl font-bold text-primary-neon-green mb-4">Proceso de Inscripción de Equipos</h2>
+                    <h2 class="text-3xl font-bold text-primary-neon-green mb-4">REGISTRO DEL TORNEO</h2>
                     
-                    <!-- INICIO: Párrafo Modificado (Nota Importante) -->
                     <p class="text-lg text-gray-300 mb-4">
-                        Para participar en el torneo, primero debes contar con un <span class="font-bold text-secondary-blue-violet">escuadrón registrado dentro de Mobile Legends Bang Bang</span> y registrar por única vez a tu escuadrón en nuestra organización llenando un simple formulario. Luego de eso, ya podrás <span class="font-bold text-primary-neon-green">inscribir a tu equipo en el presente torneo</span>.
+                        La inscripción es totalmente gratuita. Para participar, solo debes proceder a inscribir a tus jugadores en el torneo.
                     </p>
                     
-                    <div class="p-4 rounded-lg text-sm md:text-base mb-8" style="background-color: var(--translucent-black-70); border: 1px solid var(--secondary-blue-violet);">
-                        <p class="font-bold text-primary-neon-green mb-1">NOTA IMPORTANTE:</p>
+                    <!-- PROVISIONAL WHATSAPP GROUP NOTE -->
+                    <div class="p-4 rounded-lg text-sm md:text-base mb-8" style="background-color: var(--translucent-black-70); border: 1px solid var(--primary-neon-green);">
+                        <p class="font-bold text-secondary-blue-violet mb-1">ACCESO AL GRUPO:</p>
                         <p class="text-gray-300">
-                            Si tu escuadrón ya se encuentra registrado dentro de <span class="font-bold">TNML (Torneos Nocturnos de Mobile Legends)</span>, entonces sáltate el <span class="font-bold text-primary-neon-green">Paso 1</span> y ve directamente a inscribir a tus jugadores en el <span class="font-bold text-secondary-blue-violet">Paso 2</span>.
+                            Tras completar el registro, el capitán del equipo recibirá el enlace para unirse al <span class="font-bold text-primary-neon-green">Grupo de WhatsApp PROVISIONAL</span>. Este grupo es EXCLUSIVAMENTE informativo para anuncios del torneo.
                         </p>
                     </div>
-                    <!-- FIN: Párrafo Modificado (Nota Importante) -->
-
-
-                    <div class="grid md:grid-cols-2 gap-8 mb-10">
+                    
+                    <!-- REGISTRATION CARD (FORMER STEP 2) -->
+                    <div class="step-card primary-step p-6 rounded-xl shadow-2xl flex flex-col items-center text-center mx-auto max-w-md">
+                        <span class="text-6xl font-extrabold text-primary-neon-green mb-4">¡LISTO!</span>
+                        <h3 class="text-2xl font-bold text-primary-neon-green mb-3">Inscribe a tu Equipo en el Torneo</h3>
                         
-                        <!-- Step 1: Register Squad (UPDATED CONTENT) -->
-                        <div class="step-card primary-step p-6 rounded-xl shadow-2xl flex flex-col items-center text-center">
-                            <span class="text-6xl font-extrabold text-primary-neon-green mb-4">1</span>
-                            <h3 class="text-2xl font-bold text-primary-neon-green mb-3">Inscribe a tu Escuadrón en TNML</h3>
-                            
-                            <!-- New Content -->
-                            <p class="text-gray-300 mb-4">
-                                <span class="font-semibold">OBLIGATORIO</span> para poder participar en nuestros torneos. El formulario es sencillo, sólo debes tener a la mano la información del Escuadrón debidamente registrado dentro de Mobile Legends y de su Líder.
-                            </p>
-                            <div class="text-xs p-2 rounded-lg text-gray-400 font-medium w-full mt-2" style="background-color: var(--translucent-black-50);">
-                                <span class="font-bold text-primary-neon-green">Nota:</span> Si tu escuadrón ya está registrado en TNML, omite este paso.
-                            </div>
-                            
-                            <!-- Registration Link -->
-                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfo11rmii5Hb-t-FY366mK_n5cDirwltU5wzEkqSqkLDeMrUw/viewform?usp=header" target="_blank" 
-                                class="inline-flex items-center justify-center px-6 py-3 text-sm md:text-base font-bold uppercase rounded-xl btn-action-primary w-full mt-auto">
-                                REGISTRO DE ESCUADRÓN
-                                <svg class="w-8 h-8 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
-                            </a>
+                        <p class="text-gray-300 mb-4">
+                            Registra a tu Equipo de <span class="font-bold">5 Titulares</span> y máximo <span class="font-bold">2 Suplentes</span> para participar en el V.E.N.O.M. Tournament.
+                        </p>
+                        <div class="text-xs p-2 rounded-lg text-gray-400 font-medium w-full mt-2" style="background-color: var(--translucent-black-50);">
+                            <span class="font-bold text-primary-neon-green">Recordatorio:</span> El cupo es limitado. Si el formulario no permite el registro, el cupo ya fue cubierto.
                         </div>
                         
-                        <!-- Step 2: Register Players (UPDATED CONTENT) -->
-                        <div class="step-card p-6 rounded-xl shadow-2xl flex flex-col items-center text-center">
-                            <span class="text-6xl font-extrabold text-secondary-blue-violet mb-4">2</span>
-                            <h3 class="text-2xl font-bold text-secondary-blue-violet mb-3">Registra a tu Equipo en el Torneo</h3>
-                            
-                            <!-- New Content -->
-                            <p class="text-gray-300 mb-4">
-                                Si tu escuadrón está debidamente creado en Mobile Legends y registrado en TNML, puedes proceder a inscribir a tu Equipo de <span class="font-bold">5 Titulares</span> y máximo <span class="font-bold">2 Suplentes</span> para que participen en el V.E.N.O.M. Tournament.
-                            </p>
-                            <div class="text-xs p-2 rounded-lg text-gray-400 font-medium w-full mt-2" style="background-color: var(--translucent-black-50);">
-                                <span class="font-bold text-secondary-blue-violet">Nota:</span> Una vez que se agoten los cupos no te permitirá inscribir a tu equipo.
-                            </div>
-                            
-                            <!-- Player Registration Link -->
-                            <a href="https://forms.gle/QqYaPM1yN8Yzna9u7" target="_blank" 
-                                class="inline-block px-6 py-3 text-sm md:text-base font-bold uppercase rounded-xl btn-action-secondary w-full mt-auto">
-                                REGISTRO DE JUGADORES DEL EQUIPO AQUÍ
-                                <svg class="w-5 h-5 inline ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                            </a>
-                        </div>
+                        <!-- Player Registration Link -->
+                        <a href="https://forms.gle/QqYaPM1yN8Yzna9u7" target="_blank" 
+                            class="inline-block px-6 py-3 text-sm md:text-base font-bold uppercase rounded-xl btn-action-primary w-full mt-auto">
+                            REGISTRO DE JUGADORES DEL EQUIPO AQUÍ
+                            <svg class="w-5 h-5 inline ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </a>
                     </div>
+
 
                     
                     <!-- Team Details -->
-<h3 class="text-3xl font-bold text-primary-neon-green mb-6 border-t pt-6 border-gray-700">Detalles del Equipo de Torneo</h3>
+<h3 class="text-3xl font-bold text-primary-neon-green mb-6 border-t pt-6 border-gray-700 mt-10">Detalles del Equipo de Torneo</h3>
 
                     <div class="grid md:grid-cols-2 gap-6">
                         
@@ -546,7 +560,7 @@ Tu navegador no soporta la etiqueta de video HTML5.
 <div class="mt-10 pt-6 border-t border-gray-700">
                         <h3 class="text-2xl font-bold text-secondary-blue-violet mb-4 text-center">Requisito Obligatorio para Premios</h3>
                         <p class="text-lg text-gray-300 mb-6 text-center">
-                            Para poder recibir los 5 Pases Semanales, es obligatorio que <span class="font-bold text-primary-neon-green">todos los miembros del equipo ganador</span> sigan nuestras redes sociales. ¡Conéctate con TNML!
+                            Para poder recibir los 5 Pases Semanales y el Trofeo Digital, es obligatorio que <span class="font-bold text-primary-neon-green">todos los miembros del equipo ganador</span> sigan nuestras redes sociales. ¡Conéctate con TNML!
                         </p>
                         
                         <!-- Social Links -->
@@ -586,7 +600,7 @@ Tu navegador no soporta la etiqueta de video HTML5.
                 </div>
             </section>
 
-            <!-- Partida Section -->
+            <!-- Partida Section - UPDATED WITH VENEZUELAN PRIORITY -->
 <section id="partida-section" class="content-section">
                 
                 <div class="bg-gray-800 rounded-lg shadow-xl p-6 md:p-8">
@@ -604,8 +618,8 @@ Tu navegador no soporta la etiqueta de video HTML5.
                                 <li class="flex items-start gap-3">
                                     <span class="text-secondary-blue-violet font-bold text-xl">►</span>
                                     <div>
-                                        <h4 class="font-semibold text-lg">Creación de Sala</h4>
-                                        <p class="text-gray-400">El modo de juego es <span class="font-bold">Draft Pick</span>. Los capitanes deben acordar quién crea la sala. (Recomendado: El equipo de arriba en el <span class="italic">bracket</span>). Servidor: Venezuela.</p>
+                                        <h4 class="font-semibold text-lg">Creación de Sala y Prioridad</h4>
+                                        <p class="text-gray-400">El modo de juego es <span class="font-bold">Draft Pick</span>. Si un equipo es <span class="font-bold text-primary-neon-green">venezolano</span>, tiene la <span class="underline">PRIORIDAD</span> para crear la sala. De lo contrario, los capitanes acuerdan quién la crea. Servidor: Venezuela.</p>
                                     </div>
                                 </li>
                                 <li class="flex items-start gap-3">
@@ -625,7 +639,7 @@ Tu navegador no soporta la etiqueta de video HTML5.
                             </ul>
                         </div>
 
-                        <!-- During Match Rules (PROHIBIDO PAUSAR REMOVED) -->
+                        <!-- During Match Rules -->
 <div>
                             <h3 class="2xl font-semibold text-primary-neon-green mb-3 border-b-2 border-gray-700 pb-2">Durante la Partida</h3>
                              <ul class="list-none space-y-4">
@@ -634,7 +648,7 @@ Tu navegador no soporta la etiqueta de video HTML5.
                                     <span class="text-red-500 font-bold text-xl">►</span>
                                     <div>
                                         <h4 class="font-semibold text-lg text-red-400">PROHIBIDO ESPECTADORES</h4>
-                                        <p class="text-gray-400">Solo los 10 jugadores pueden estar en la sala. (Excepción: La final podrá ser transmitida por staff de TNML).</p>
+                                        <p class="text-gray-400">Solo los 10 jugadores pueden estar en la sala. (Excepción: Las finales serán transmitidas por staff de TNML).</p>
                                     </div>
                                 </li>
                                 <li class="flex items-start gap-3">
@@ -673,7 +687,7 @@ Tu navegador no soporta la etiqueta de video HTML5.
                 </div>
             </section>
 
-            <!-- Conducta Section -->
+            <!-- Conducta Section - UPDATED WITH XENOFOBIA AND STAFF RULES -->
 <section id="conducta-section" class="content-section">
                 
                 <div class="bg-gray-800 rounded-lg shadow-xl p-6 md:p-8">
@@ -684,60 +698,80 @@ Tu navegador no soporta la etiqueta de video HTML5.
 
                     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                         
+                        <!-- Rule 6: XENOFOBIA/DISCRIMINACION (NEW) -->
+                        <div class="stat-card border-l-4 border-red-500 items-start p-4">
+                            <h3 class="text-xl font-bold text-red-500 mb-2">🔴 XENOFOBIA/DISCRIMINACIÓN</h3>
+                            <p class="text-gray-400"><span class="font-bold">Tolerancia Cero:</span> Actitudes xenófobas, racistas o discriminatorias a otros equipos, jugadores o nacionalidades.</p>
+                        </div>
+                        
+                        <!-- Rule 7: STAFF DISRESPECT (NEW) -->
+                        <div class="stat-card border-l-4 border-red-500 items-start p-4">
+                            <h3 class="text-xl font-bold text-red-500 mb-2">🔴 IRRESPETO AL STAFF/ORG</h3>
+                            <p class="text-gray-400"><span class="font-bold">Mal Trato o Difamación:</span> Prohibido el mal trato al STAFF u organizadores. Prohibido hablar mal de la organización con pruebas de ello.</p>
+                        </div>
+
                         <!-- Rule 1: Impersonation -->
 <div class="stat-card border-l-4 border-gray-400 items-start p-4">
-                            <h3 class="text-xl font-bold text-gray-300 mb-2">🚫 PROHIBIDO</h3>
+                            <h3 class="text-xl font-bold text-gray-300 mb-2">🚫 SUPLANTACIÓN</h3>
                             <p class="text-gray-400"><span class="font-bold">Suplantación de Identidad:</span> Jugar en la cuenta de otro jugador o con un Nickname no registrado.</p>
                         </div>
                         <!-- Rule 2: External Programs -->
                         <div class="stat-card border-l-4 border-gray-400 items-start p-4">
-                            <h3 class="text-xl font-bold text-gray-300 mb-2">🚫 PROHIBIDO</h3>
+                            <h3 class="text-xl font-bold text-gray-300 mb-2">🚫 PROGRAMAS EXTERNOS</h3>
                             <p class="text-gray-400"><span class="font-bold">Programas Externos:</span> Uso de <span class="italic">hacks</span>, <span class="italic">scripts</span>, <span class="italic">map hacks</span> o cualquier software de trampa.</p>
                         </div>
                         <!-- Rule 3: Bug Abuse (FIXED) -->
                         <div class="stat-card border-l-4 border-gray-400 items-start p-4">
-                            <h3 class="text-xl font-bold text-gray-300 mb-2">🚫 PROHIBIDO</h3>
+                            <h3 class="text-xl font-bold text-gray-300 mb-2">🚫 APROVECHAR BUGS</h3>
                             <p class="text-gray-400"><span class="font-bold">Aprovechamiento de Bugs:</span> Usar intencionalmente <span class="italic">bugs</span> o <span class="italic">exploits</span> del juego para ganar.</p>
                         </div>
                         <!-- Rule 4: Toxic Behavior (FIXED) -->
                         <div class="stat-card border-l-4 border-gray-400 items-start p-4">
-                            <h3 class="text-xl font-bold text-gray-300 mb-2">🚫 PROHIBIDO</h3>
+                            <h3 class="text-xl font-bold text-gray-300 mb-2">🚫 COMPORTAMIENTO TÓXICO</h3>
                             <p class="text-gray-400"><span class="font-bold">Comportamiento Tóxico:</span> Faltas de respeto, lenguaje vulgar, acoso o amenazas (dentro o fuera del juego).</p>
                         </div>
                         <!-- Rule 5: In-Game Provocation -->
                         <div class="stat-card border-l-4 border-gray-400 items-start p-4">
-                            <h3 class="text-xl font-bold text-gray-300 mb-2">🚫 PROHIBIDO</h3>
+                            <h3 class="text-xl font-bold text-gray-300 mb-2">🚫 PROVOCACIÓN IN-GAME</h3>
                             <p class="text-gray-400"><span class="font-bold">Provocación en Juego:</span> Burlas, <span class="italic">spam</span> de <span class="italic">emotes</span> y <span class="italic">backeos</span> con la intención de provocar al rival.</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Disputas Section -->
+            <!-- Disputas Section - UPDATED WITH CLAIM/SUGGESTION RULES -->
 <section id="disputas-section" class="content-section">
                 
                 <div class="bg-gray-800 rounded-lg shadow-xl p-6 md:p-8">
-                    <h2 class="text-3xl font-bold text-primary-neon-green mb-4">Disputas y Sanciones</h2>
+                    <h2 class="text-3xl font-bold text-primary-neon-green mb-4">Disputas, Sanciones y Sugerencias</h2>
                     <p class="text-lg text-gray-300 mb-6">
-                        Si un equipo rival rompe las reglas, aquí te explicamos cómo proceder y cuáles son las consecuencias.
+                        Si un equipo rival rompe las reglas o si tienes un reclamo o sugerencia para la organización, aquí te explicamos cómo proceder.
                     </p>
 
                     <div class="grid md:grid-cols-2 gap-6">
                         
-                        <!-- How to Report -->
+                        <!-- How to Report/Claim -->
 <div class="bg-gray-900 p-6 rounded-lg border border-gray-700">
-                            <h3 class="text-2xl font-semibold text-primary-neon-green mb-3">¿Cómo Denunciar una Falta?</h3>
-                            <p class="text-gray-300 mb-4">Dado que las partidas no son supervisadas (excepto la final), las denuncias deben ser presentadas por los capitanes.</p>
+                            <h3 class="text-2xl font-semibold text-primary-neon-green mb-3">Reclamos y Sugerencias</h3>
+                            
+                            <p class="text-gray-300 mb-4 font-bold text-lg text-red-400">Todo reclamo o sugerencia DEBE ser presentado por el formulario.</p>
+                            
                             <ol class="list-decimal list-inside space-y-2 text-gray-300 mb-4">
-                                <li><span class="font-bold">Capitán:</span> Solo el capitán puede presentar una denuncia formal a la organización.</li>
-                                <li><span class="font-bold">PRUEBAS:</span> La denuncia debe incluir <span class="font-bold">pruebas irrefutables</span> (captures de pantalla del chat, videos, etc.) que muestren la falta, quién la cometió y la hora.</li>
-                                <li class="font-semibold text-secondary-blue-violet">Sin pruebas claras, la denuncia será desestimada.</li>
+                                <li><span class="font-bold">Forma:</span> Las sugerencias son bienvenidas para mejorar, pero solo a través del formulario.</li>
+                                <li><span class="font-bold text-red-500">PROHIBIDO PÚBLICO:</span> Reclamos o sugerencias hechas públicamente o frente a otros miembros del STAFF no autorizados se considerarán como intento de <span class="underline">sabotaje</span> y serán objeto de un llamado de atención formal.</li>
+                                <li class="font-semibold text-secondary-blue-violet">Acumular llamados de atención por esta causa será considerada Falta Grave.</li>
                             </ol>
                             
                             <!-- Denounce Button -->
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSciCjtgPFfOLh6V9u6vf-jYanlVD5LM4_FulKO9K-2U3_vouA/viewform?usp=publish-editor" target="_blank" id="denuncia-upload-btn" class="inline-block px-6 py-2 text-md font-bold uppercase rounded transition-all duration-300 transform hover:scale-105 shadow-md mt-2 denuncia-btn">
-                                DENUNCIA A UN EQUIPO AQUÍ
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSciCjtgPFfOLh6V9u6vf-jYanlVD5LM4_FulKO9K-2U3vouA/viewform?usp=publish-editor" target="_blank" id="claim-upload-btn" class="inline-block px-6 py-2 text-md font-bold uppercase rounded transition-all duration-300 transform hover:scale-105 shadow-md mt-2 denuncia-btn">
+                                DENUNCIA O RECLAMO DE PARTIDA AQUÍ
                                 <svg class="w-5 h-5 inline ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                            </a>
+                            
+                            <!-- Claim/Suggestion Button (NEW) -->
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLScJp5W_oY3l7Z8a9X6c1-2f3b4h5i6j7k8l9m0n/viewform?usp=publish-editor" target="_blank" id="suggestion-btn" class="inline-block px-6 py-2 text-md font-bold uppercase rounded transition-all duration-300 transform hover:scale-105 shadow-md mt-4 btn-action-secondary">
+                                HAZ TU RECLAMO O SUGERENCIA A LA ORGANIZACIÓN AQUÍ
+                                <svg class="w-5 h-5 inline ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 4v-4z"></path></svg>
                             </a>
                             
                         </div>
@@ -745,7 +779,7 @@ Tu navegador no soporta la etiqueta de video HTML5.
                         <!-- Sanctions -->
 <div class="bg-gray-900 p-6 rounded-lg border border-gray-700">
                             <h3 class="text-2xl font-semibold text-primary-neon-green mb-3">Sanciones por Faltas Graves  </h3>
-                            <p class="text-gray-300 mb-3">Cualquier equipo que cometa las faltas graves (trampas, suplantación, hacks) recibirá:</p>
+                            <p class="text-gray-300 mb-3">Cualquier equipo que cometa las faltas graves (trampas, suplantación, **xenofobia**, irrespeto al staff) recibirá:</p>
                             
                             <ul class="list-disc list-inside space-y-2 text-red-500 font-bold">
                                 <li>Descalificación Inmediata del torneo.</li>
